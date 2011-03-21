@@ -1,0 +1,19 @@
+Chrome CVT proxy
+=======================
+
+By: Arvid Böttiger <bottiger+cvtproxy@gmail.com>
+
+Code: http://github.com/bottiger/cvtproxy
+
+Destription
+-----------
+
+This extension is made for people at DTU, and other universities, who uses .globalproxy.cvt.dk for accessing scientific articles and other similar resources.
+
+This extension will transform the URL of the current tab from
+
+http://pubs.rsc.org/en/Content/ArticleLanding/2011/CC/c0cc02927k
+
+into something similar to
+
+http://pubs.rsc.org.globalproxy.cvt.dk/en/Content/ArticleLanding/2011/CC/c0cc02927k

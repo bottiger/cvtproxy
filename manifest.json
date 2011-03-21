@@ -1,0 +1,15 @@
+{
+   "background_page": "background.html",
+   "browser_action": {
+      "default_icon": "icon128.png",
+      "default_title": "CVT Proxy"
+   },
+   "description": "Quickly appends globalproxy.cvt.dk to the TLD of the current webpage",
+   "icons": {
+      "128": "icon128.png",
+      "48": "icon48.png",
+      "16": "icon16.png"
+   },
+   "version": "1.1",
+   "name": "CVT proxy"
+}

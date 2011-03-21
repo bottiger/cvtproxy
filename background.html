@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <script>
+            const PROXY_URL = ".globalproxy.cvt.dk";
+
+            function transformUrl(url) {
+
+                if (url.indexOf(PROXY_URL) >= 0) {
+			//return base.replace("$@", url);
+			return url;
+                }
+		url_array = url.split("/");
+		url_array[2] = url_array[2] + PROXY_URL;
+		return url_array.join("/");
+            }
+
+            chrome.browserAction.onClicked.addListener(function(tab) {
+                chrome.tabs.update(tab.id, {"url": transformUrl(tab.url)});
+            });
+
+            chrome.contextMenus.create({
+                "title": "Access through proxy",
+                "contexts": ["link"],
+                "onclick": function(info, tab) {
+                    chrome.tabs.create({"url": transformUrl(info.linkUrl)});
+                }
+            });
+        </script>
+    </head>
+</html>
